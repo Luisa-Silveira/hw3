@@ -56,7 +56,7 @@ if (ride.length == 1) {
   passenger3DropoffAddressLine2 = ride[2].dropoffLocation.city +',' + ' ' + ride[2].dropoffLocation.state +' ' + ride[2].dropoffLocation.zip
 }
 
-  if (ride[0].numberOfPassengers == 1 || ride.length < 1) {
+  if (ride.length > 1 && ride[0].numberOfPassengers == 1) {
     levelOfService = 'Noober Pool'
 
     } else if (ride[0].purpleRequested == true) {
